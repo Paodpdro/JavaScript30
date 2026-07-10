@@ -72,8 +72,11 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
     const total = data.reduce((acc, curr) => {
-      acc[curr] = 
+      acc[curr] = (acc[curr] || 0) + 1;
+      return acc
     }, {});
+
+    console.log(total)
   </script>
 </body>
 </html>
